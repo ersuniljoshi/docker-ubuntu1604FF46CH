@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170222 11:46:15.153" generator="Robot 3.0.1 (Python 2.7.12 on linux2)">
+<suite source="/home/test/Tests" id="s1" name="Tests">
+<suite source="/home/test/Tests/MyScript.robot" id="s1-s1" name="MyScript">
+<test id="s1-s1-t1" name="Test_01">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.google.com</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170222 11:46:15.248" level="INFO">Opening browser 'Chrome' to base url 'http://www.google.com'</msg>
+<status status="PASS" endtime="20170222 11:46:26.329" starttime="20170222 11:46:15.248"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=lst-ib</arg>
+</arguments>
+<msg timestamp="20170222 11:46:26.330" level="INFO">Clicking element 'id=lst-ib'.</msg>
+<status status="PASS" endtime="20170222 11:46:26.400" starttime="20170222 11:46:26.330"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>opening browser ${BROWSER}</arg>
+</arguments>
+<status status="PASS" endtime="20170222 11:46:26.401" starttime="20170222 11:46:26.400"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=lst-ib</arg>
+<arg>infobeans</arg>
+</arguments>
+<msg timestamp="20170222 11:46:26.401" level="INFO">Typing text 'infobeans' into text field 'id=lst-ib'</msg>
+<status status="PASS" endtime="20170222 11:46:26.507" starttime="20170222 11:46:26.401"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170222 11:46:26.565" starttime="20170222 11:46:26.507"></status>
+</kw>
+<status status="PASS" endtime="20170222 11:46:26.566" critical="yes" starttime="20170222 11:46:15.247"></status>
+</test>
+<status status="PASS" endtime="20170222 11:46:26.567" starttime="20170222 11:46:15.170"></status>
+</suite>
+<status status="PASS" endtime="20170222 11:46:26.569" starttime="20170222 11:46:15.154"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="1">Tests</stat>
+<stat fail="0" id="s1-s1" name="MyScript" pass="1">Tests.MyScript</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

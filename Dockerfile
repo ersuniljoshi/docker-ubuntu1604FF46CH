@@ -59,8 +59,6 @@ RUN wget --no-verbose -O /tmp/chromedriver_linux64.zip https://chromedriver.stor
 	&& ln -fs /opt/selenium/chromedriver-$CHROME_DRIVER_VERSION /usr/bin/chromedriver 
 
 
-COPY chrome_launcher.sh /usr/bin/google-chrome
-RUN chmod +x /usr/bin/google-chrome
-
-CMD ["bash","/home/test/run.sh"]
+CMD ["bash","/home/scripts/chrome_launcher.sh"]
+CMD ["bash","/home/scripts/run.sh"]
 
