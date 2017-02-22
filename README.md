@@ -29,17 +29,17 @@ docker images
 ### Run Image of Docker on Chrome Browser:
 
 ```
-docker run --rm -e BROWSER=Chrome -v [local-dir-path]/home/anujita/PycharmProjects/DockerDemo:/home/test -ti ubuntuffch[image-name]
+docker run --rm -e BROWSER=Chrome -v [local-dir-path]:/home/test -ti ubuntuffch[image-name]
 ```
 
 ### Run Image of Docker on Firefox Browser:
 ```
-docker run --rm -e BROWSER=Firefox -v [local-dir-path]/home/anujita/PycharmProjects/DockerDemo:/home/test -ti ubuntuffch[image-name]
+docker run --rm -e BROWSER=Firefox -v [local-dir-path]:/home/test -ti ubuntuffch[image-name]
 ```
 
 ### To Run Docker Image using Volume Mapping:
 ```
-docker run --rm -e BROWSER=Firefox -v [local-dir-path]/home/anujita/PycharmProjects/DockerDemo:/home/test -ti ubuntuffch[image-name]
+docker run --rm -e BROWSER=Firefox -v [local-dir-path]:/home/test -ti ubuntuffch[image-name]
 ```
 
 * Use run.sh file to run your scripts inside docker containers.
