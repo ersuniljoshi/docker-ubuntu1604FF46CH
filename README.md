@@ -29,20 +29,20 @@ docker images
 ### Run Image of Docker on Chrome Browser:
 
 ```
-docker run --rm -e ROBOT_TESTS=/sample_tests -e BROWSER=Chrome -v /Users/sunil/gitrepos/roboDemo/:/sample_tests -ti ubuntuffch
+docker run --rm -e BROWSER=Chrome -v [local-dir-path]/home/anujita/PycharmProjects/DockerDemo:/home/test -ti ubuntuffch[image-name]
 ```
 
-### Run Image of Docker on Chrome Browser:
+### Run Image of Docker on Firefox Browser:
 ```
-docker run --rm -e ROBOT_TESTS=/sample_tests -e BROWSER=Firefox -v /Users/sunil/gitrepos/roboDemo/:/sample_tests -ti ubuntuffch
+docker run --rm -e BROWSER=Firefox -v [local-dir-path]/home/anujita/PycharmProjects/DockerDemo:/home/test -ti ubuntuffch[image-name]
 ```
 
 ### To Run Docker Image using Volume Mapping:
 ```
-docker run --rm -e ROBOT_TESTS=/sample_tests -e BROWSER=Firefox -v /Users/sunil/gitrepos/roboDemo/:/sample_tests -ti ubuntuffch
+docker run --rm -e BROWSER=Firefox -v [local-dir-path]/home/anujita/PycharmProjects/DockerDemo:/home/test -ti ubuntuffch[image-name]
 ```
 
 * Use run.sh file to run your scripts inside docker containers.
-* sample_tests contains the Robot Test Scripts which is to be run.
+* /home/test is the path inside the container which has Robot Test Scripts which is running.
 * Path after -v is the path of the test script on our local machine.
 * ubuntuffch is the name of the Docker Image.
