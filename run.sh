@@ -34,8 +34,6 @@ echo -e "Executing robot tests at log level ${LOG_LEVEL}"
 google-chrome --version
 firefox --version
 
-#pybot --loglevel ${LOG_LEVEL} -v BROWSER:${BROWSER} ${ROBOT_TESTS} 
-#pybot --loglevel ${LOG_LEVEL} -v BROWSER:${BROWSER} ${ROBOT_TESTS}/Tests --report ${ROBOT_TESTS}/results
 robot --loglevel ${LOG_LEVEL} -v BROWSER:${BROWSER} -d ${ROBOT_TESTS}/Results ${ROBOT_TESTS}/Tests 
 
 # Stop Xvfb

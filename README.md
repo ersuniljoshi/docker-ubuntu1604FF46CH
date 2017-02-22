@@ -8,9 +8,10 @@
 * Pip
 * Python 2.7
 * Firefox 46.0
-* Google-Chrome 55.0
+* Google-Chrome latest
 * xvfb
 * selenium 2.53.6
+* chrome-driver 2.27
 
 ### Base Image:
 
