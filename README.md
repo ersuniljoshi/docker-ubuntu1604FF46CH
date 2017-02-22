@@ -10,6 +10,7 @@
 * Firefox 46.0
 * Google-Chrome 55.0
 * xvfb
+* selenium 2.53.6
 
 ### Base Image:
 
@@ -34,15 +35,16 @@ docker run --rm -e BROWSER=Chrome -v [local-dir-path]:/home/test -ti ubuntuffch[
 
 ### Run Image of Docker on Firefox Browser:
 ```
-docker run --rm -e BROWSER=Firefox -v [local-dir-path]:/home/test -ti ubuntuffch[image-name]
+docker run --rm -e BROWSER=firefox -v [local-dir-path]:/home/test -ti ubuntuffch[image-name]
 ```
 
 ### To Run Docker Image using Volume Mapping:
 ```
-docker run --rm -e BROWSER=Firefox -v [local-dir-path]:/home/test -ti ubuntuffch[image-name]
+docker run --rm -e BROWSER=firefox -v [local-dir-path]:/home/test -ti ubuntuffch[image-name]
 ```
 
 * Use run.sh file to run your scripts inside docker containers.
 * /home/test is the path inside the container which has Robot Test Scripts which is running.
 * Path after -v is the path of the test script on our local machine.
 * ubuntuffch is the name of the Docker Image.
+

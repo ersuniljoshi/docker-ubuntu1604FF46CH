@@ -1,9 +1,9 @@
 FROM ubuntu:16.04
 MAINTAINER "Sunil Joshi" <joshi.sunil@outlook.com>
 
-LABEL name="Ubuntu 16.04 with updated repos and packages, FF 46, Chrome Latest, Geckodriver and ChromeDriver"
+LABEL name="Ubuntu 16.04 with updated repos and packages, FF 46, Chrome Latest, Geckodriver and ChromeDriver 2.27"
 LABEL name="Docker image for the Robot Framework http://robotframework.org/"
-LABEL usage="docker run -e ROBOT_TESTS=/path/to/tests/ --rm -v $(pwd)/path/to/tests/:/path/to/tests/ -ti robot-docker"
+LABEL usage="docker run -e Browser=browser -v $(pwd)/path/to/tests/:/path/to/tests/ -ti ubuntu1604ffch"
 
 # Installing Dependency Packages
 RUN apt-get -y update\
@@ -58,12 +58,9 @@ RUN wget --no-verbose -O /tmp/chromedriver_linux64.zip https://chromedriver.stor
 	&& chmod 755 /opt/selenium/chromedriver-$CHROME_DRIVER_VERSION \ 
 	&& ln -fs /opt/selenium/chromedriver-$CHROME_DRIVER_VERSION /usr/bin/chromedriver 
 
-#RUN chmod +x /usr/bin/google-chrome
 
-COPY run.sh /usr/local/bin/run.sh
-RUN chmod a+x /usr/local/bin/run.sh
 COPY chrome_launcher.sh /usr/bin/google-chrome
 RUN chmod +x /usr/bin/google-chrome
 
-#CMD ["bash","/usr/local/bin/run.sh"]
 CMD ["bash","/home/test/run.sh"]
+
