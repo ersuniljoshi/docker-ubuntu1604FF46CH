@@ -65,4 +65,5 @@ RUN chmod a+x /usr/local/bin/run.sh
 COPY chrome_launcher.sh /usr/bin/google-chrome
 RUN chmod +x /usr/bin/google-chrome
 
-CMD ["bash","/usr/local/bin/run.sh"]
+#CMD ["bash","/usr/local/bin/run.sh"]
+CMD ["bash","/home/test/run.sh"]
