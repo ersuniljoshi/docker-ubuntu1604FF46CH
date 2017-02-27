@@ -34,7 +34,7 @@ echo -e "Executing robot tests at log level ${LOG_LEVEL}"
 google-chrome --version
 firefox --version
 
-robot --loglevel ${LOG_LEVEL} -v BROWSER:${BROWSER} -d ${ROBOT_TESTS}/Results -x ${ROBOT_TESTS}/Results/junit.xml ${ROBOT_TESTS}/Tests 
+robot --loglevel ${LOG_LEVEL} -v BROWSER:${BROWSER} -d ${ROBOT_TESTS}/Results -x junit.xml ${ROBOT_TESTS}/Tests 
 
 # Stop Xvfb
 kill -9 $(pgrep Xvfb)
