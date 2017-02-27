@@ -20,3 +20,10 @@ Test_02
     log to console  opening browser ${BROWSER}
     input text  id=lst-ib  infobeans
     close browser
+Test_03
+    open browser  http://www.google.com  ${BROWSER}
+    #open browser  ${SERVER}  ${BROWSER}  ${DESIRED_CAPABILITIES}  ${REMOTE_URL}
+    click element  id=lst-ib
+    log to console  opening browser ${BROWSER}
+    input text  id=lst-ib  infobeans
+    close browser
